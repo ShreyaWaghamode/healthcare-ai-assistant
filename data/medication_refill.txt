@@ -1,0 +1,39 @@
+MEDICATION REFILL POLICY
+
+Purpose:
+This policy outlines procedures for requesting and approving prescription medication refills.
+
+Eligibility for Refill:
+Medication refills may be approved when:
+- The medication was previously prescribed by an authorized provider
+- The patient has attended required follow-up appointments
+- No adverse reactions or contraindications are documented
+
+Methods for Refill Request:
+Patients may request refills through:
+- Patient portal
+- Telephone support line
+- Telehealth consultation
+- In-person clinic visit
+
+Controlled Substances:
+Controlled medications may require:
+- In-person evaluation
+- Additional identity verification
+- Periodic laboratory testing
+- Provider approval
+
+Processing Time:
+Routine refill requests are generally processed within 48 business hours.
+
+Refill Denial:
+Refill requests may be denied if:
+- The patient has not completed required follow-up visits
+- The medication requires physical assessment
+- Safety concerns are identified by the provider
+
+Emergency Refills:
+Limited emergency refills may be provided at provider discretion for essential medications.
+
+Pharmacy Coordination:
+Approved refill prescriptions are electronically transmitted to the patient's preferred pharmacy.

@@ -1,0 +1,15 @@
+{
+    "search.useGlobalIgnoreFiles": true
+}{
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "search.exclude": {
+        "**/__pycache__": true,
+        "**/.venv": false,
+        "**/data": false
+    },
+    "search.useIgnoreFiles": true,
+    "search.useParentIgnoreFiles": true,
+    "search.useGlobalIgnoreFiles": true
+}

@@ -1,0 +1,63 @@
+ 
+TELEHEALTH SERVICES POLICY
+
+What is telehealth?
+Telehealth allows patients to consult healthcare providers remotely using video calls, phone calls, or secure online platforms.
+
+Who can use telehealth services?
+Patients with non-emergency medical concerns may be eligible for telehealth appointments depending on provider availability and medical condition.
+
+How can patients schedule a telehealth appointment?
+Patients may schedule telehealth visits through:
+- Patient portal
+- Hospital website
+- Customer support helpline
+- Mobile healthcare application
+
+What devices are required for telehealth visits?
+Patients may use:
+- Smartphone
+- Tablet
+- Laptop
+- Desktop computer
+with internet connectivity, camera, and microphone access.
+
+Are telehealth visits covered by insurance?
+Many insurance providers cover telehealth services; however, coverage depends on the patient's insurance plan and state regulations.
+
+Can prescriptions be provided during telehealth visits?
+Healthcare providers may prescribe medications during telehealth consultations if medically appropriate and permitted by regulations.
+
+Can patients request medication refills through telehealth?
+Yes, patients can request medication refills through telehealth if the medication is already prescribed and does not require an in-person evaluation.
+
+What should patients do before a telehealth appointment?
+Patients should:
+- Test internet connection
+- Ensure device camera and microphone work properly
+- Keep identification and insurance documents ready
+- Join the session 10 minutes before the appointment
+
+Can telehealth be used for emergency conditions?
+No. Patients experiencing emergency medical conditions should immediately contact emergency services or visit the nearest emergency department.
+
+How are telehealth appointment confirmations sent?
+Appointment confirmations may be sent through:
+- SMS
+- Email
+- Patient portal notifications
+
+Can telehealth appointments be rescheduled?
+Yes, telehealth appointments may be rescheduled based on provider availability.
+
+What happens if a telehealth connection fails?
+Patients may:
+- Rejoin the session
+- Switch to phone consultation if approved
+- Contact technical support for assistance
+
+Are telehealth consultations secure?
+Yes, healthcare organizations use secure and HIPAA-compliant communication platforms to protect patient information and privacy.
+
+Can specialists provide telehealth consultations?
+Yes, selected specialists may offer telehealth consultations depending on medical specialty and patient condition.

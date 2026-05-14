@@ -1,0 +1,37 @@
+APPOINTMENT SCHEDULING POLICY
+
+Purpose:
+This policy explains procedures for scheduling, rescheduling, and canceling patient appointments.
+
+Scheduling Methods:
+Appointments may be scheduled through:
+- Online patient portal
+- Telephone scheduling center
+- In-person registration desk
+
+Advance Scheduling:
+Routine appointments should be scheduled at least 48 hours in advance whenever possible.
+
+Appointment Confirmation:
+Patients receive appointment reminders through:
+- SMS notifications
+- Email reminders
+- Automated phone calls
+
+Late Arrival Policy:
+Patients arriving more than 15 minutes late may need to reschedule depending on provider availability.
+
+Cancellation Policy:
+Patients should provide at least 24 hours notice for appointment cancellations.
+
+No-Show Policy:
+Repeated missed appointments without notice may result in scheduling restrictions.
+
+Specialist Referrals:
+Certain specialty appointments require referral approval from a primary care provider.
+
+Telehealth Appointments:
+Eligible appointments may be converted to telehealth sessions based on provider approval and patient condition.
+
+Emergency Visits:
+Patients with emergency medical conditions should seek immediate emergency care rather than scheduling routine appointments.
