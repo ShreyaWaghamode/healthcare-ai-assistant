@@ -24,7 +24,7 @@ class PineconeStore:
             self.pc.create_index(
                 name=PINECONE_INDEX,
                 dimension=384,
-                metric="cosine",
+                metric="cosine-similarity",
                 spec=ServerlessSpec(
                     cloud="aws",
                     region="us-east-1"

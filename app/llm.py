@@ -14,7 +14,11 @@ import ollama
 #     def generate(self, prompt):
 
 #         response = self.client.chat.completions.create(
-#             model="gpt-4o-mini",
+#       
+# 
+# 
+# 
+#       model="gpt-4o-mini",
 
 #             messages=[
 #                 {
@@ -32,23 +36,31 @@ import ollama
 
 
 
-
 class OllamaLLM:
 
-    def __init__(
-        self,
-        model="gemma3"
-    ):
-
+    def __init__(self, model="gemma3"):
         self.model = model
 
     def generate(self, prompt):
 
+        system_prompt = """
+You are a strict healthcare AI assistant.
+
+Rules:
+- Answer ONLY using the provided context.
+- If the answer is not in the context, say: "I could not find this information in the provided documents."
+- Do NOT guess or hallucinate.
+- Do NOT provide medical diagnosis.
+- Keep answers short, clear, and professional.
+"""
+
         response = ollama.chat(
-
             model=self.model,
-
             messages=[
+                {
+                    "role": "system",
+                    "content": system_prompt
+                },
                 {
                     "role": "user",
                     "content": prompt

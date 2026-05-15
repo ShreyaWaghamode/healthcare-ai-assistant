@@ -1,16 +1,18 @@
 FROM python:3.10
 
-# Set working directory
 WORKDIR /app
 
-# Copy project files
+# Install dependencies first (better caching)
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy rest of the code
 COPY . .
 
-# Install dependencies
-RUN pip install -r requirements.txt
+# IMPORTANT: ensure data folder is included
+COPY data ./data
 
-# Expose FastAPI port
 EXPOSE 8000
 
-# Run FastAPI app
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

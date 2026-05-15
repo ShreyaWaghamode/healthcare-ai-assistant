@@ -1,4 +1,3 @@
-from openai import OpenAI
 from app.tools import check_available_slots
 from app.llm import OllamaLLM
 
@@ -8,90 +7,88 @@ class Agent:
     def __init__(self):
 
         self.llm = OllamaLLM()
-        #self.llm = OpenAI
 
-    def decide_route(
-        self,
-        question
-    ):
+    def decide_route(self, question):
 
         router_prompt = f"""
-You are an intelligent routing agent.
+You are a healthcare AI routing agent.
 
-Your task is to decide whether the user question needs:
+Your task is to decide whether the user's question requires:
 
 1. TOOL
-- Use TOOL only if user wants:
-    - booking appointment
-    - scheduling
-    - checking available slots
-    - doctor timings
+Use TOOL ONLY when the user wants to PERFORM an action such as:
+- booking an appointment
+- checking doctor availability
+- checking available slots
+- scheduling a visit
+- rescheduling appointments
+- doctor timings
+
+Examples:
+- "Book an appointment with cardiology"
+- "Show available slots"
+- "What time is Dr. Smith available?"
+- "Schedule my visit for tomorrow"
 
 2. RAG
-- Use RAG for:
-    - hospital policies
-    - insurance
-    - telehealth
-    - appointment confirmation
-    - cancellation policy
-    - medication
-    - FAQs
-    - document-based questions
+Use RAG when the user is:
+- asking for information
+- asking explanatory questions
+- asking definitions or concepts
+- asking healthcare FAQs
+- asking policy questions
+- asking educational questions
+
+Examples:
+- "What are scheduling methods?"
+- "Explain appointment scheduling"
+- "What is telehealth?"
+- "How does insurance work?"
+- "What are hospital policies?"
+
+IMPORTANT:
+- If the user is asking ABOUT something, choose RAG.
+- If the user wants to DO something, choose TOOL.
 
 Return ONLY one word:
 TOOL
 or
 RAG
 
-QUESTION:
+Question:
 {question}
 
-ANSWER:
+Answer:
 """
 
-        decision = self.llm.generate(
-            router_prompt
-        )
+        decision = self.llm.generate(router_prompt)
 
-        return decision.strip().upper()
+        decision = decision.strip().upper()
 
-    def route(
-        self,
-        question,
-        rag_pipeline
-    ):
+        if decision not in ["TOOL", "RAG"]:
+            decision = "RAG"
 
-        decision = self.decide_route(
-            question
-        )
+        return decision
+
+    def route(self, question, rag_pipeline):
+
+        decision = self.decide_route(question)
 
         print(f"\nROUTER DECISION: {decision}")
 
         # TOOL FLOW
-        
+        if decision == "TOOL":
 
-        if "TOOL" in decision:
-
-            tool_response = (
-                check_available_slots()
-            )
+            tool_response = check_available_slots()
 
             return {
-                "answer": (
+                "answer":
                     f"Available slots for "
                     f"{tool_response['department']}:\n"
                     + "\n".join(
-                        tool_response[
-                            "available_slots"
-                        ]
+                        tool_response["available_slots"]
                     )
-                ),
-
-                "sources": [],
-
-                "confidence": "high"
             }
 
         # RAG FLOW
-
         return rag_pipeline.ask(question)
