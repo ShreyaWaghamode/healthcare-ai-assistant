@@ -19,6 +19,18 @@ class AskRequest(BaseModel):
 
     question: str
 
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+def home():
+
+    return {
+        "message": "Healthcare AI Assistant API is running"
+    }
+
 
 @app.get("/health")
 def health():
